@@ -1,7 +1,7 @@
-Advent of Code[About][Events][Shop][Settings][Log Out]Vermilion Harbor 1*
+Advent of Code[About][Events][Shop][Settings][Log Out]Vermilion Harbor 2*
        y(2025)[Calendar][AoC++][Sponsors][Leaderboards][Stats]
 Our sponsors help make Advent of Code possible:
-CGI - Join our Software Development Revolution. Discover how AI is transforming the way we build software and how we're building what's next.
+Citadel Securities - Our engineers build the tech that helps power global markets with speed, precision and data. Every nanosecond matters. Join us at the edge of innovation (Just don't blink. The markets won't).
 --- Day 1: Secret Entrance ---
 The Elves have good news and bad news.
 
@@ -62,8 +62,6 @@ Analyze the rotations in your attached document. What's the actual password to o
 
 Your puzzle answer was 1066.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 You're sure that's the right password, but the door won't open. You knock, but nobody answers. You build a snowman while you think.
 
@@ -92,9 +90,12 @@ Be careful: if the dial were pointing at 50, a single rotation like R1000 would 
 
 Using password method 0x434C49434B, what is the password to open the door?
 
-Answer:
+Your puzzle answer was 6223.
 
+Both parts of this puzzle are complete! They provide two gold stars: **
 
-Although it hasn't changed, you can still get your puzzle input.
+At this point, you should return to your Advent calendar and try another puzzle.
+
+If you still want to see it, you can get your puzzle input.
 
 You can also [Share] this puzzle.

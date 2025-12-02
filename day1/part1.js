@@ -2,8 +2,6 @@ const fs = require('fs');
 
 const lines = fs.readFileSync('input.txt').toString().split('\n').filter(l => l !== "");
 
-console.log(lines);
-
 let position = 50;
 let numZeros = 0;
 

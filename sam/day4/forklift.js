@@ -32,7 +32,7 @@ const prettyPrint = (board, width, height) => {
 }
 
 const searchRolls = (board, width, height) => {
-    let numAccess = 0;
+    const accessMap = {}
     for (let i = 0; i < height; i++) {
         for (let j = 0; j < width; j++) {
             let numAdjacent = 0;
@@ -50,14 +50,44 @@ const searchRolls = (board, width, height) => {
             if (board[toIndex(i+1, j)] === "@") { numAdjacent++ }
             if (board[toIndex(i+1, j+1)] === "@") { numAdjacent++ }
 
-            if (numAdjacent < 4) { numAccess ++}
+            if (numAdjacent < 4) {
+                accessMap[toIndex(i, j)] = "@";
+            }
         }
     }
 
-    return numAccess;
+    return accessMap;
 }
 
 prettyPrint(boardMap, width, height);
 
-const numAccessible = searchRolls(boardMap, width, height);
-console.log(`num accessible ${numAccessible}`);
+const part1 = () => {
+    const accessMap = searchRolls(boardMap, width, height);
+    const numAccessible = Object.keys(accessMap).length;
+    console.log(`Part1: num accessible ${numAccessible}`);
+}
+
+part1();
+
+const part2 = () => {
+    let board = {...boardMap};
+
+    let numAccessible = 0;
+    let numRemoved = 0;
+    do  {
+        const accessMap = searchRolls(board, width, height);
+        numAccessible = Object.keys(accessMap).length;
+        console.log(`num accessible ${numAccessible}`);
+        numRemoved += numAccessible;
+
+        for (let k of Object.keys(accessMap)) {
+            // remove the ones that are accessible
+            delete board[k];
+        }
+    } while (numAccessible > 0);
+
+    console.log(`num removed ${numRemoved}`);
+}
+
+part2();
+
